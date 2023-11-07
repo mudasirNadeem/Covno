@@ -244,7 +244,7 @@
         <div class="col-md-6 col-sm-12 col-lg-6 p-0 m-0 ">
           <div class="card bg-black-dark pb-3 ">
             <div class="text-white pt-2 ps-2 d-flex justify-content-center" style="height: 536px; width: 100%; ">
-              <div class="maindiv">
+              <div id="pie-chart-card" class="maindiv">
                 <div class="frontcard">
 
 
@@ -268,7 +268,7 @@
             <div class="d-flex justify-content-between ps-3 pe-3">
               <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
               <div>
-                <button class="btn btn-primary me-3" onclick="flipCard()"> Chartify</button>
+                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card')"> Chartify</button>
 
               </div>
             </div>
@@ -276,10 +276,10 @@
         </div>
         <div class="col-md-6 col-sm-12 col-lg-6  m-0 sm-mt-2 sm-p-0 sm-mt-20">
           <div class="card bg-black-dark  text-white pt-2 ps-2 text-white pb-3 ">
-            <div class="scroll-sm" style="height: 480px; width: 100% ; overflow: auto;" >
-              <table class="table text-white  "  >
-                <thead >
-                  <tr  class="bg-light-gray" >
+            <div class="scroll-sm" style="height: 480px; width: 100% ; overflow: auto;">
+              <table class="table text-white  ">
+                <thead>
+                  <tr class="bg-light-gray">
                     <th scope="col" class="text-white">#</th>
                     <th scope="col" class="text-white">First</th>
                     <th scope="col" class="text-white">Last</th>
@@ -386,29 +386,28 @@
                 </tbody>
 
               </table>
-              
+
             </div>
-            <nav aria-label="Page navigation example"  class="w-100 d-flex  justify-content-end align-items-center pd-2"
-                style="position: relative;  right: 20px; ">
-                <ul class="pagination" 
-                >
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+            <nav aria-label="Page navigation example" class="w-100 d-flex  justify-content-end align-items-center pd-2"
+              style="position: relative;  right: 20px; ">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
             <div>
-              <div class="row" >
+              <div class="row">
                 <div class="col-3 d-flex align-items-center ">
 
                   <div class="pe-2 "><a href=""> <img src="Assets/like 2.png" alt="" width="30px"> </a></div>
@@ -435,15 +434,32 @@
       <div class="row sm-ps-2" id="card">
         <div class="col-md-6 col-sm-12 col-lg-6 p-0 m-0 ">
           <div class="card bg-black-dark pb-3  ">
-            <div class="text-white pt-2 ps-2 d-flex justify-content-center align-items-center" style="height: 515px; width: 100%; ">
-              <div>
-                <canvas id="bar-chart"></canvas>
+            <div class="text-white pt-2 ps-2 d-flex justify-content-center align-items-center"
+              style="height: 515px; width: 100%; ">
+              <div id="bar-chart-card"  class="maindiv">
+                <div class="frontcard">
+            
+            
+                </div>
+                <div class="backcard">
+                  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            
+                    <div>
+                      <canvas id="bar-chart"></canvas>
+                    </div>
+            
+                  </div>
+            
+            
+                </div>
               </div>
+
+              
             </div>
             <div class="d-flex justify-content-between ps-3 pe-3">
               <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
               <div>
-                <button class="btn btn-primary me-3"> Chartify</button>
+                <button onclick="flipCard('bar-chart-card')" class="btn btn-primary me-3"> Chartify</button>
               </div>
             </div>
           </div>
@@ -643,21 +659,40 @@
       var footerpadding = document.getElementById('footerpadding');
       footerpadding.classList.toggle('ps-230')
     }
-
-
-
-    var maindiv = document.querySelector('.maindiv');
-    var isFront = true; // Track if the front card is currently visible
     Chart.register(ChartDataLabels);
-    function flipCard() {
-      if (isFront) {
-        maindiv.style.transform = 'rotateY(180deg)';
-      } else {
-        maindiv.style.transform = 'rotateY(0deg)';
+
+    setFront("pie-chart-card");
+    setFront("bar-chart-card");
+
+
+    function setFront(id) {
+      const element = document.getElementById(id);
+
+      if (!element) {
+        console.error(`Element with ID '${id}' not found.`);
+        return;
+      }
+      element.dataset.isFront = "true";
+    }
+
+    function flipCard(elementId) {
+      const element = document.getElementById(elementId);
+
+      if (!element) {
+        console.error(`Element with ID '${elementId}' not found.`);
+        return;
       }
 
-      isFront = !isFront;
+      if (element.dataset.isFront === "true") {
+        element.style.transform = 'rotateY(180deg)';
+        element.dataset.isFront = "false";
+      } else {
+        element.style.transform = 'rotateY(0deg)';
+        element.dataset.isFront = "true";
+      }
     }
+
+
 
 
     const pieChart = document.getElementById('pie-chart');
@@ -674,6 +709,12 @@
       },
       options: {
         plugins: {
+          legend: {
+            display: true,
+            labels: {
+              color: "#dee2e6"
+            }
+          },
           datalabels: {
             formatter: (value, ctx) => {
               let sum = 0;
@@ -694,31 +735,31 @@
 
 
     const barChart = document.getElementById('bar-chart');
-  
-  new Chart(barChart, {
-    type: 'bar',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
+
+    new Chart(barChart, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        },
+        {
+          label: 'Total of Votes',
+          data: [12, -19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
       },
-      {
-        label: 'Total of Votes',
-        data: [12, -19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-    responsive: false,
-      scales: {
-        y: {
-          beginAtZero: true
+      options: {
+        responsive: false,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
         }
       }
-    }
-  });
+    });
   </script>
 
 </body>
