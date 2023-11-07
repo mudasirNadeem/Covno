@@ -278,6 +278,15 @@
 .nav::-webkit-scrollbar-button {
     display: none; /* Hide the buttons if you don't want them */
 }
+.scroll-sm::-webkit-scrollbar{
+    width: 5px;
+}
+.scroll-sm::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Change this to your desired color */
+}
+.scroll-sm::-webkit-scrollbar-button {
+        display: none; /* Hide the buttons if you don't want them */
+}
 .nav_logo-icon {
     font-size: 1.25rem;
     color: var(--white-color);
