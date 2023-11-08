@@ -224,7 +224,7 @@
       
       <div class="row sm-ps-2" id="card">
         <div class="col-md-12  col-sm-12 col-lg-6 p-0 m-0 " >
-          <div id="dropdown" style="visibility: visible;">
+          <div id="dropdownId" style="visibility: visible;">
       <p class="text-white " style="position: relative; top: 10px; ">Create Chart For</p>
           <div class="input-group me-2 mb-2 removeWithClick"  style="width: 220px;">
             <select class="form-select" id="inputGroupSelect01">
@@ -236,7 +236,7 @@
           </div>
         </div>
           <div class="card bg-black pb-3 ">
-            <div class="text-white pt-2 ps-2 d-flex justify-content-center" style="height: 536px; width: 100%; ">
+            <div class="text-white pt-2 ps-2 d-flex justify-content-center" style="height: 440px; width: 100%; ">
               <div id="pie-chart-card" class="maindiv" >
                 <div class="frontcard">
 
@@ -255,17 +255,18 @@
                 </div>
               </div>
 
-              <div class="form-floating w-100 mb-4 me-2" id="textarea"  style="display: block;">
-              <textarea class="form-control bg-black focus-border-middle-green text-white box-shadow-none border-middle-green h-100 " placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <div class="form-floating w-100 mb-4 me-2" id="textAreaId"  style="display: block;">
+              <textarea class="form-control bg-black focus-border-middle-green text-white box-shadow-none border-middle-green h-100 " placeholder="Editable Textbox here" id="floatingTextarea"></textarea>
             </div>
 
             </div>
-            <div class=" position-relative ps-3 pe-3" id="first-none" style="display: none; height: 30px;  ;">
+            <div class=" position-relative ps-3 pe-3" id="pynonefooter" style="display: none; height: 30px;  ;">
+
               <div class="d-flex">
                 <div>
                <a href="">   <img src="Assets/like 2.png" alt="" width="30px"></a>
                 </div>
-                <div style="margin-right: 80px;">
+                <div class="ms-2" style="margin-right: 80px;">
                 <a href="">  <img src="Assets/like 1.png" alt="" width="30px"> </a>
                 </div>
                 <div style="margin-right: 80px;">
@@ -279,15 +280,15 @@
                 </div>
               </div>
               <div>
-                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card')" style="position: absolute; right: 0; bottom: -5px;" > back to   Chartify</button>
+                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card','dropdownId','pynonefooter','pyblockfooter','textAreaId','pynonefooter')" style="position: absolute; right: 0; bottom: -5px;" > Back to   Chartify</button>
               </div>
             </div>
 
-            <div class=" ps-3 pe-3" id="firstblock" style="display: block; height: 30px; ;" >
+            <div class=" ps-3 pe-3" id="pyblockfooter" style="display: block; height: 30px; ;" >
               <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
            
               <div>
-                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card')" id="none" style="display: block; position: absolute; right: 0; bottom: 10px;"  >  Chartify</button>
+                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card','dropdownId','pynonefooter','pyblockfooter','textAreaId','pynonefooter')" id="btn-flip-piechart" style="display: block; position: absolute; right: 0; bottom: 10px;"  >  Chartify</button>
 
               </div>
             </div>
@@ -296,7 +297,7 @@
         
         <div class="col-md-12 col-sm-12 col-lg-6 m-0 sm-p-0">
       <p class="text-white " style="position: relative;  right: 10px; opacity: 0; cursor: default; ">Create Chart For</p>
-          <div class="input-group mb-2 " style="width: 220px;">
+          <div class="input-group mb-2 " id="bar-dropdown" style="width: 220px; visibility: visible;">
             <select class="form-select" id="inputGroupSelect01">
               <option selected>Choose...</option>
               <option value="1">One</option>
@@ -305,8 +306,8 @@
             </select>
           </div>
           <div class="card bg-black-dark pb-3  ">
-            <div class="text-white pt-2 ps-2 d-flex justify-content-center align-items-center"
-              style="height: 536px; width: 100%; ">
+            <div class="text-white pt-2 ps-2 d-flex justify-content-center "
+              style="height: 440px; width: 100%; ">
               <div id="bar-chart-card"  class="maindiv">
                 <div class="frontcard">
             
@@ -324,13 +325,38 @@
             
                 </div>
               </div>
-
+              <div class="form-floating w-100 mb-4 me-2 " id="bar-textareaId" style="display: block;">
+                <textarea class="form-control bg-black h-100 text-white border-middle-green focus-border-middle-green box-shadow-none " placeholder="Editable Textbox here" id="floatingTextarea"></textarea>
+              </div>
               
             </div>
-            <div class="d-flex justify-content-between ps-3 pe-3">
+            <div class=" position-relative ps-3 pe-3" id="barnonefooter" style="display: none; height: 30px;  ;">
+
+              <div class="d-flex">
+                <div>
+               <a href="">   <img src="Assets/like 2.png" alt="" width="30px"></a>
+                </div>
+                <div class="ms-2" style="margin-right: 80px;">
+                <a href="">  <img src="Assets/like 1.png" alt="" width="30px"> </a>
+                </div>
+                <div style="margin-right: 80px;">
+              <a href="">    <img src="Assets/email 1 (1).png" alt="" width="30px"> </a>
+                </div>
+                <div style="margin-right: 80px;">
+                 <a href=""> <img src="Assets/copy 1.png" alt="" width="30px"></a>
+                </div>
+                   <div >
+                 <a href=""> <img src="Assets/download.png" alt="" width="30px"></a>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary me-3" onclick="flipCard('bar-chart-card','', '' , '', '','' ,'bar-textareaId','bar-dropdown','barnonefooter','barblockfooter')" style="position: absolute; right: 0; bottom: -5px;" > Back to   Chartify</button>
+              </div>
+            </div>
+            <div class="justify-content-between ps-3 pe-3" id="barblockfooter" style="display: block; height: 30px;">
               <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
               <div>
-                <button onclick="flipCard('bar-chart-card')" class="btn btn-primary me-3"> Back to Chartify</button>
+                <button onclick="flipCard('bar-chart-card','', '' , '', '','' ,'bar-textareaId','bar-dropdown','barnonefooter','barblockfooter')" class="btn btn-primary me-3" style="display: block; position: absolute; right: 0; bottom: 10px;">Chartify</button>
               </div>
             </div>
           </div>
@@ -526,7 +552,7 @@
       element.dataset.isFront = "true";
     }
 
-    function flipCard(elementId) {
+    function flipCard(elementId,dropdownId,blockId,flipButtonId,textAreaId,pynonefooter,bartextareaId,bardropdown,barnonefooter,barblockfooter) {
       const element = document.getElementById(elementId);
 
       if (!element) {
@@ -542,7 +568,7 @@
         element.dataset.isFront = "true";
       }
       
-      var dropdownElement = document.getElementById('dropdown');
+      var dropdownElement = document.getElementById(dropdownId);
     if (dropdownElement) {
         if (dropdownElement.style.visibility === 'hidden') {
             dropdownElement.style.visibility = 'visible';
@@ -550,17 +576,10 @@
             dropdownElement.style.visibility = 'hidden';
         }
     }
-    var blockElement = document.getElementById('block');
-    if (blockElement) {
-        if (blockElement.style.display === 'none') {
-          blockElement.style.display = 'block';
-        } else {
-          blockElement.style.display = 'none';
-        }
-    }
-    var noneElement = document.getElementById('none');
+   
+    var noneElement = document.getElementById(flipButtonId);
     if (noneElement) {
-      
+
         if (noneElement.style.display === 'block') {
             noneElement.style.display = 'none';
         } else {
@@ -568,15 +587,20 @@
         }
     }
    
-var textarea = document.getElementById('textarea');
-if (textarea) {
-    if (textarea.style.display === 'block') {
-      textarea.style.display = 'none';
-    } else {
+var textarea = document.getElementById(textAreaId);
+if (textarea) 
+{
+    if (textarea.style.display === 'none')
+     {
       textarea.style.display = 'block';
     }
+
+     else
+      {
+      textarea.style.display = 'none';
+    }
 }
-var firstnone = document.getElementById('first-none')
+var firstnone = document.getElementById(pynonefooter)
 if(firstnone){
   if(firstnone.style.display === 'none'){
     firstnone.style.display = 'block';
@@ -584,16 +608,57 @@ if(firstnone){
   else{
     firstnone.style.display = 'none';
   }
-}
-var firstblock = document.getElementById('firstblock');
-if(firstblock){
-  if(firstblock.style.display === 'block'){
-    firstblock.style.display = 'none'
-  }else{
-    firstblock.style.display = 'block'
+ }
+ var firstblock = document.getElementById(pyblockfooter);
+ if(firstblock){
+   if(firstblock.style.display === 'block'){
+     firstblock.style.display = 'none'
+   }else{
+     firstblock.style.display = 'block'
+   }
+ }
+
+ var bartextareaId = document.getElementById(bartextareaId)
+ if(bartextareaId){
+  if(bartextareaId.style.display === 'none'){
+    bartextareaId.style.display = 'block'
+  }
+  else{
+    bartextareaId.style.display = 'none'
+  }
+ }
+
+ var bardropdown = document.getElementById(bardropdown)
+ if(bardropdown){
+  if(bardropdown.style.visibility === 'visible'){
+    bardropdown.style.visibility = 'hidden';
+
+  }
+  else{
+    bardropdown.style.visibility = 'visible';
+
+  }
+ }
+ var barnonefooter = document.getElementById(barnonefooter)
+ if(barnonefooter){
+  if(barnonefooter.style.display === 'none'){
+    barnonefooter.style.display = 'block';
+  }
+  else{
+    barnonefooter.style.display = 'none';
+
+  }
+ }
+var barblockfooter = document.getElementById(barblockfooter)
+if(barblockfooter){
+  if(barblockfooter.style.display === 'block'){
+    barblockfooter.style.display = 'none';
+  }
+  else{
+    barblockfooter.style.display = 'block';
+
   }
 }
-
 }
 
 
