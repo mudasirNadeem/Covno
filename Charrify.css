@@ -32,3 +32,10 @@ canvas#bar-chart {
     width: 500px !important;
     background: white;
 }
+.border-middle-green{
+    border: solid 4px green;
+}
+.focus-border-middle-green:focus{
+    border: solid 4px green;
+
+}

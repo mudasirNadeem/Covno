@@ -20,7 +20,7 @@
 
   <link rel="stylesheet" href="Globel.css">
   <link rel="stylesheet" href="/audioMotionAnalyzer.cs">
-  <link rel="stylesheet" href="./Charrify.css">
+  <link rel="stylesheet" href="Charrify.css">
   <title>Document</title>
 </head>
 <style>
@@ -221,39 +221,32 @@
   <!--Container Main start-->
   <div>
     <div class="ps-70 me-4" id="remove">
-      <p class="text-white " style="position: relative; top: 17px; right: 10px;">Create Chart For</p>
-      <div class="d-flex pt-2 mb-2 sm-positon-right-20-px" style="position: relative; right: 10px;">
-        <div class="input-group me-2 " style="width: 220px;">
-          <select class="form-select" id="inputGroupSelect01">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div class="input-group  " style="width: 220px;">
-          <select class="form-select" id="inputGroupSelect01">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-      </div>
+      
       <div class="row sm-ps-2" id="card">
-        <div class="col-md-6 col-sm-12 col-lg-6 p-0 m-0 ">
-          <div class="card bg-black-dark pb-3 ">
+        <div class="col-md-12  col-sm-12 col-lg-6 p-0 m-0 " >
+          <div id="dropdown" style="visibility: visible;">
+      <p class="text-white " style="position: relative; top: 10px; ">Create Chart For</p>
+          <div class="input-group me-2 mb-2 removeWithClick"  style="width: 220px;">
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+          <div class="card bg-black pb-3 ">
             <div class="text-white pt-2 ps-2 d-flex justify-content-center" style="height: 536px; width: 100%; ">
-              <div id="pie-chart-card" class="maindiv">
+              <div id="pie-chart-card" class="maindiv" >
                 <div class="frontcard">
 
 
                 </div>
                 <div class="backcard">
-                  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;" >
 
                     <div>
-                      <canvas style="width: 400px; height: 400px;" id="pie-chart"></canvas>
+                      <canvas style="width: 400px; height: 400px;" id="pie-chart" ></canvas>
                     </div>
 
                   </div>
@@ -262,180 +255,58 @@
                 </div>
               </div>
 
-
+              <div class="form-floating w-100 mb-4 me-2" id="textarea"  style="display: block;">
+              <textarea class="form-control bg-black focus-border-middle-green text-white box-shadow-none border-middle-green h-100 " placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            </div>
 
             </div>
-            <div class="d-flex justify-content-between ps-3 pe-3">
-              <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
+            <div class=" position-relative ps-3 pe-3" id="first-none" style="display: none; height: 30px;  ;">
+              <div class="d-flex">
+                <div>
+               <a href="">   <img src="Assets/like 2.png" alt="" width="30px"></a>
+                </div>
+                <div style="margin-right: 80px;">
+                <a href="">  <img src="Assets/like 1.png" alt="" width="30px"> </a>
+                </div>
+                <div style="margin-right: 80px;">
+              <a href="">    <img src="Assets/email 1 (1).png" alt="" width="30px"> </a>
+                </div>
+                <div style="margin-right: 80px;">
+                 <a href=""> <img src="Assets/copy 1.png" alt="" width="30px"></a>
+                </div>
+                   <div >
+                 <a href=""> <img src="Assets/download.png" alt="" width="30px"></a>
+                </div>
+              </div>
               <div>
-                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card')"> Chartify</button>
+                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card')" style="position: absolute; right: 0; bottom: -5px;" > back to   Chartify</button>
+              </div>
+            </div>
+
+            <div class=" ps-3 pe-3" id="firstblock" style="display: block; height: 30px; ;" >
+              <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
+           
+              <div>
+                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card')" id="none" style="display: block; position: absolute; right: 0; bottom: 10px;"  >  Chartify</button>
 
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 col-lg-6  m-0 sm-mt-2 sm-p-0 sm-mt-20">
-          <div class="card bg-black-dark  text-white pt-2 ps-2 text-white pb-3 ">
-            <div class="scroll-sm" style="height: 480px; width: 100% ; overflow: auto;">
-              <table class="table text-white  ">
-                <thead>
-                  <tr class="bg-light-gray position-sticky top-0">
-                    <th scope="col" class="text-white">#</th>
-                    <th scope="col" class="text-white">First</th>
-                    <th scope="col" class="text-white">Last</th>
-                    <th scope="col" class="text-white">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th class="text-white" scope="row">1</th>
-                    <td class="text-white">Mark</td>
-                    <td class="text-white">Otto</td>
-                    <td class="text-white">@mdo</td>
-                  </tr>
-                  <tr>
-                    <th class="text-white" scope="row">2</th>
-                    <td class="text-white">Jacob</td>
-                    <td class="text-white">Thornton</td>
-                    <td class="text-white">@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-
-              </table>
-
-            </div>
-            <nav aria-label="Page navigation example" class="w-100 d-flex  justify-content-end align-items-center pd-2"
-              style="position: relative;  right: 20px; ">
-              <ul class="pagination">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <div>
-              <div class="row">
-                <div class="col-3 d-flex align-items-center ">
-
-                  <div class="pe-2 "><a href=""> <img src="Assets/like 2.png" alt="" width="30px"> </a></div>
-                  <div>
-                    <a href="#"> <img src="Assets/like 1.png" alt="" width="30px"> </a>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <span> <a href="#"> <img src="Assets/email 1 (1).png" alt="" width="30px"> </a></span>
-                </div>
-                <div class="col-3">
-                  <span>
-                    <a href="#"> <img src="Assets/copy 1.png" alt="" width="30px"> </a></span>
-                </div>
-                <div class="col-3">
-                  <span>
-                    <a href="#"> <img src="Assets/download.png" alt="" width="30px"> </a></span>
-                </div>
-              </div>
-            </div>
+        
+        <div class="col-md-12 col-sm-12 col-lg-6 m-0 sm-p-0">
+      <p class="text-white " style="position: relative;  right: 10px; opacity: 0; cursor: default; ">Create Chart For</p>
+          <div class="input-group mb-2 " style="width: 220px;">
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
           </div>
-        </div>
-      </div> <br>
-      <div class="row sm-ps-2" id="card">
-        <div class="col-md-6 col-sm-12 col-lg-6 p-0 m-0 ">
           <div class="card bg-black-dark pb-3  ">
             <div class="text-white pt-2 ps-2 d-flex justify-content-center align-items-center"
-              style="height: 515px; width: 100%; ">
+              style="height: 536px; width: 100%; ">
               <div id="bar-chart-card"  class="maindiv">
                 <div class="frontcard">
             
@@ -459,41 +330,14 @@
             <div class="d-flex justify-content-between ps-3 pe-3">
               <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
               <div>
-                <button onclick="flipCard('bar-chart-card')" class="btn btn-primary me-3"> Chartify</button>
+                <button onclick="flipCard('bar-chart-card')" class="btn btn-primary me-3"> Back to Chartify</button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-lg-6  m-0 sm-mt-2 sm-p-0 sm-mt-20">
-          <div class="card bg-black-dark pt-2 ps-2 text-white pb-3 ">
-            <div style="height: 512px; width: 100%">
-              Once you Click On recomender the Processed text will show up here
-            </div>
-            <div>
-              <div class="row">
-                <div class="col-3 d-flex align-items-center ">
-
-                  <div class="pe-2 "><a href=""> <img src="Assets/like 2.png" alt="" width="30px"> </a></div>
-                  <div>
-                    <a href="#"> <img src="Assets/like 1.png" alt="" width="30px"> </a>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <span> <a href="#"> <img src="Assets/email 1 (1).png" alt="" width="30px"> </a></span>
-                </div>
-                <div class="col-3">
-                  <span>
-                    <a href="#"> <img src="Assets/copy 1.png" alt="" width="30px"> </a></span>
-                </div>
-                <div class="col-3">
-                  <span>
-                    <a href="#"> <img src="Assets/download.png" alt="" width="30px"> </a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+      </div> 
+      <br>
+       
     </div>
   </div>
   <br> <br>
@@ -663,6 +507,9 @@
       var footerpadding = document.getElementById('footerpadding');
       footerpadding.classList.toggle('ps-230')
     }
+  
+
+   
     Chart.register(ChartDataLabels);
 
     setFront("pie-chart-card");
@@ -694,7 +541,60 @@
         element.style.transform = 'rotateY(0deg)';
         element.dataset.isFront = "true";
       }
+      
+      var dropdownElement = document.getElementById('dropdown');
+    if (dropdownElement) {
+        if (dropdownElement.style.visibility === 'hidden') {
+            dropdownElement.style.visibility = 'visible';
+        } else {
+            dropdownElement.style.visibility = 'hidden';
+        }
     }
+    var blockElement = document.getElementById('block');
+    if (blockElement) {
+        if (blockElement.style.display === 'none') {
+          blockElement.style.display = 'block';
+        } else {
+          blockElement.style.display = 'none';
+        }
+    }
+    var noneElement = document.getElementById('none');
+    if (noneElement) {
+      
+        if (noneElement.style.display === 'block') {
+            noneElement.style.display = 'none';
+        } else {
+            noneElement.style.display = 'block';
+        }
+    }
+   
+var textarea = document.getElementById('textarea');
+if (textarea) {
+    if (textarea.style.display === 'block') {
+      textarea.style.display = 'none';
+    } else {
+      textarea.style.display = 'block';
+    }
+}
+var firstnone = document.getElementById('first-none')
+if(firstnone){
+  if(firstnone.style.display === 'none'){
+    firstnone.style.display = 'block';
+  }
+  else{
+    firstnone.style.display = 'none';
+  }
+}
+var firstblock = document.getElementById('firstblock');
+if(firstblock){
+  if(firstblock.style.display === 'block'){
+    firstblock.style.display = 'none'
+  }else{
+    firstblock.style.display = 'block'
+  }
+}
+
+}
 
 
 
