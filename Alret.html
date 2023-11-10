@@ -145,7 +145,7 @@
     <header class="header" id="header">
       <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
       <div class="text-white">
-        <h5 class="text-white">Chartify</h5>
+        <h5 class="text-white">Show a list of Alerts</h5>
       </div>
       <div>
         <button class="btn btn-primary sm-d-none ms-2 border-radius-20" type="submit">Upgrade to premium</button>
@@ -176,11 +176,11 @@
             <a href="AskMe.html" class="nav_link"> <span class="w-h-apply"> <img
                   src="Assets/Ellipse 1 (1).svg"
                   alt="" width="15px"> </span> <span class="nav_name"> Answer Me</span> </a>
-            <a href="Chartify.html" class="nav_link "> <span class="w-h-apply"> <svg viewBox="0 -18 50 50"
+            <a href="Chartify.html" class="nav_link active"> <span class="w-h-apply"> <svg viewBox="0 -18 50 50"
                   style="width: 15px; height: 100%;"><text class="fa" x="50%" y="50%" text-anchor="middle"
                     style="font-size: 50px; fill: currentcolor;"></text></svg> </span> <span
                 class="nav_name">Chartify</span> </a>
-            <a href="Alret.html" class="nav_link active"> <span class="w-h-apply"> <svg viewBox="0 -18 50 50"
+            <a href="Alret.html" class="nav_link"> <span class="w-h-apply"> <svg viewBox="0 -18 50 50"
                   style="width: 15px; height: 100%;"><text class="fa" x="50%" y="50%" text-anchor="middle"
                     style="font-size: 50px; fill: currentcolor;"></text></svg></span><span class="nav_name">Show a list
                 of Alerts</span> </a>
@@ -260,35 +260,36 @@
             </div>
 
             </div>
-            <div class=" position-relative ps-3 pe-3" id="pynonefooter" style="display: none; height: 30px;  ;">
+            <div class=" w-100 ps-3 pe-3 justify-content-between" id="pynonefooter" style="  display: none; height: 30px; ">
+              <div class="col-7">
 
-              <div class="d-flex">
-                <div>
+              <div class="d-flex pt-2" >
+                <div class="col-4 ">
                <a href="">   <img src="Assets/like 2.png" alt="" width="30px"></a>
-                </div>
-                <div class="ms-2" style="margin-right: 80px;">
                 <a href="">  <img src="Assets/like 1.png" alt="" width="30px"> </a>
                 </div>
-                <div style="margin-right: 80px;">
-              <a href="">    <img src="Assets/email 1 (1).png" alt="" width="30px"> </a>
+                <div class="col-3 ">
+              <a href="#">    <img src="Assets/email 1 (1).png" alt="" width="30px"> </a>
                 </div>
-                <div style="margin-right: 80px;">
+                <div class="col-3 d-flex ">
                  <a href=""> <img src="Assets/copy 1.png" alt="" width="30px"></a>
                 </div>
-                   <div >
+                   <div class="col-2 d-flex justify-content-end">
                  <a href=""> <img src="Assets/download.png" alt="" width="30px"></a>
                 </div>
               </div>
-              <div>
-                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card','dropdownId','pynonefooter','pyblockfooter','textAreaId','pynonefooter')" style="position: absolute; right: 0; bottom: -5px;" > Back to   Chartify</button>
+            </div>
+
+              <div class="col-5 "  >
+                <button class="btn btn-primary m-auto d-block" style="position: absolute; right: 13px; "  onclick="flipCard('pie-chart-card','dropdownId','pyblockfooter','flipButtonId','textAreaId','pynonefooter','','','','',)"  > Back to   Chartify</button>
               </div>
             </div>
 
-            <div class=" ps-3 pe-3" id="pyblockfooter" style="display: block; height: 30px; ;" >
+            <div class=" ps-3 pe-3  justify-content-between" id="pyblockfooter" style=" height: 30px; display: flex;" >
               <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
            
               <div>
-                <button class="btn btn-primary me-3" onclick="flipCard('pie-chart-card','dropdownId','pynonefooter','pyblockfooter','textAreaId','pynonefooter')" id="btn-flip-piechart" style="display: block; position: absolute; right: 0; bottom: 10px;"  >  Chartify</button>
+                <button class="btn btn-primary me-3"  onclick="flipCard('pie-chart-card','dropdownId','pyblockfooter','flipButtonId','textAreaId','pynonefooter','','','','',)" id="btn-flip-piechart"   >  Chartify</button>
 
               </div>
             </div>
@@ -538,18 +539,18 @@ if (textarea)
 var firstnone = document.getElementById(pynonefooter)
 if(firstnone){
   if(firstnone.style.display === 'none'){
-    firstnone.style.display = 'block';
+    firstnone.style.display = 'flex';
   }
   else{
     firstnone.style.display = 'none';
   }
  }
- var firstblock = document.getElementById(pyblockfooter);
+ var firstblock = document.getElementById(blockId);
  if(firstblock){
-   if(firstblock.style.display === 'block'){
+   if(firstblock.style.display === 'flex'){
      firstblock.style.display = 'none'
    }else{
-     firstblock.style.display = 'block'
+     firstblock.style.display = 'flex'
    }
  }
 
@@ -577,7 +578,7 @@ if(firstnone){
  var barnonefooter = document.getElementById(barnonefooter)
  if(barnonefooter){
   if(barnonefooter.style.display === 'none'){
-    barnonefooter.style.display = 'block';
+    barnonefooter.style.display = 'flex';
   }
   else{
     barnonefooter.style.display = 'none';
@@ -586,11 +587,11 @@ if(firstnone){
  }
 var barblockfooter = document.getElementById(barblockfooter)
 if(barblockfooter){
-  if(barblockfooter.style.display === 'block'){
+  if(barblockfooter.style.display === 'flex'){
     barblockfooter.style.display = 'none';
   }
   else{
-    barblockfooter.style.display = 'block';
+    barblockfooter.style.display = 'flex';
 
   }
 }
