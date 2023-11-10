@@ -143,6 +143,11 @@
            padding-left: calc(var(--nav-width) + 188px);
        }
        }
+       @media screen and (max-width: 991px){
+        .md-p-0{
+            padding: 0;
+        }
+       }
        @media screen and (max-width: 768px){
         .sm-mt-20{
             margin-top: 20px !important;
