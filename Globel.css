@@ -29,7 +29,7 @@
         width: 100%;
         height: var(--header-height);
         position: fixed;
-        top: 0;
+        top: -1px;
         left: 0;
         display: flex;
         align-items: center;
@@ -169,6 +169,9 @@
         .sm-positon-right-20-px{
             position: relative;
             left: 10px;
+        }
+        canvas#bar-chart{
+            width: 100%  !important;
         }
        }
    body{
@@ -321,4 +324,16 @@ textarea {
 }
 .nav_link{
     font-size: 13px;
+}
+.w-450{
+    width: 400px;
+}
+@media screen and (max-width: 460px){
+    .w-450{
+        width: 100% !important;
+    }
+    .Usage{
+        margin: 0;
+        padding: 0;
+    }
 }

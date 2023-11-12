@@ -152,7 +152,9 @@ body{
     border-radius: 5px;
     overflow: hidden;
   }
-
+.w-150{
+  width: 150px;
+}
   #progress-bar {
     height: 20px;
     background-color: #49a183;
@@ -166,6 +168,14 @@ body{
     .ps-230{
       padding-left: 80px !important;
     }
+  }
+  @media screen and (max-width: 460px){
+    .w-150{
+      width: 105px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
   }
 
   
