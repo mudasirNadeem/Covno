@@ -337,7 +337,7 @@
     }
     #exampleModal,#staticBackdrop,#staticBackdrop2,#staticBackdrop3,#staticBackdrop4,#staticBackdrop5{
         width: 100%;
-        background-color: #7b7b7c  !important;
+        background-color: rgba(211, 211, 211, 90%)  !important;
         transition: .5s ease-in-out !important;
     }
     .fade,.show{
