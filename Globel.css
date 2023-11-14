@@ -339,4 +339,8 @@ textarea {
    .modal-content{
         width: 400px !important;
        }
+    .min-w-460{
+        min-width:380px !important;
+    }
+      
 }
