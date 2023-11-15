@@ -220,9 +220,9 @@
 
   <!--Container Main start-->
   <div>
-    <div class="ps-70 me-4" id="remove">
+    <div class="ps-86 me-4" id="remove">
       
-      <div class="row sm-pe-1 sm-ps-2" id="card">
+      <div class="row  sm-ps-2 sm-ps-460-0" id="card">
         <div class="col-md-12  col-sm-12 col-lg-6 p-0 m-0 " >
           <div id="dropdownId" style="visibility: visible;">
       <p class="text-white " style="position: relative; top: 10px; ">Create Chart For</p>
@@ -295,114 +295,177 @@
             </div>
           </div>
         </div>
+        
+        <div class="col-md-12 col-sm-12 col-lg-6 m-0 sm-p-0 md-p-0">
+      <p class="text-white " style="position: relative;  right: 10px; opacity: 0; cursor: default; ">Create Chart For</p>
+          <div class="input-group mb-2 " id="bar-dropdown" style="width: 220px; visibility: visible;">
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="card bg-black-dark pb-3   ">
+            <div class="text-white pt-2 ps-2 d-flex justify-content-center sm-460-500 h-440 "style=" width: 100%;  ">
+              <div id="bar-chart-card"  class="maindiv pe-2 w-600 w-sm-100 me-460-2 ps-10px" >
+                <div class="frontcard">
+            
+            
+                </div>
+                <div class="backcard">
+                  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            
+                    <div>
+                      <canvas id="bar-chart" ></canvas>
+                    </div>
+            
+                  </div>
+            
+            
+                </div>
+              </div>
+              <div class="form-floating w-100 mb-4 me-2 " id="bar-textareaId" style="display: block;">
+                <textarea class="form-control bg-black h-100 text-white border-middle-green focus-border-middle-green box-shadow-none " placeholder="Editable Textbox here" id="floatingTextarea"></textarea>
+              </div>
+              
+            </div>
+            <div class=" w-100 ps-3 pe-3 justify-content-between sm-460-flex-column h-460-120 "  id="barnonefooter" style="  display: none; ">
+              <div class="col-7">
+              <div class="d-flex pt-2" >
+                <div class="col-4 w-460-120px">
+               <a href="" >   <img src="Assets/like 2.png" alt="" width="30px"></a>
+                <a href="">  <img src="Assets/like 1.png" alt="" width="30px"> </a>
+                </div>
+                <div class="col-3 w-460-40">
+              <a href="#">    <img src="Assets/email 1 (1).png" alt="" width="30px"> </a>
+                </div>
+                <div class="col-3 d-flex  w-460-40">
+                 <a href=""> <img src="Assets/copy 1.png" alt="" width="30px"></a>
+                </div>
+                   <div class="col-2 d-flex justify-content-end w-460-40">
+                 <a href=""> <img src="Assets/download.png" alt="" width="30px"></a>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-5 "  >
+                <button onclick="flipCard('bar-chart-card','', '' , '', '','' ,'bar-textareaId','bar-dropdown','barnonefooter','barblockfooter')"  style="position: absolute; right: 13px; " class="btn btn-primary me-3 pos460-absolute-bottom-10" >Back to Chartify</button>
+              </div>
+            </div>
+            <div class="justify-content-between ps-3 pe-3 " id="barblockfooter" style="display: flex; padding-bottom: 1.9px; ">
+              <div> <a href="#"> <img src="Assets/Vector3.svg" alt="foo" width="25px"> </a></div>
+              <div>
+                <button onclick="flipCard('bar-chart-card','', '' , '', '','' ,'bar-textareaId','bar-dropdown','barnonefooter','barblockfooter')" class="btn btn-primary me-3" >Chartify</button>
+              </div>
+            </div>
+          </div>
+      </div>
       </div> 
       <br>
        
     </div>
   </div>
   <br> <br>
-  <div class=" dark-bg-color pt-4 pb-4  text-justify  ps-70 pb-3 ps-m-0 " id="anopadding">
-    <p class="fs-5 text-center pt-2 text-green">Convo's artificial intelligence technology can improve <br>
-      your data processing capabilities
-    </p> <br>
-    <p class="text-white sm-ps-2 sm-pe-2">The invoices/databases you use are important and our conversational analytics
-      has been developed to make
-      sure you adopt the proper ones. There are two free versions and five Premium versions offered by Convo so you can
-      rework any text in varied forms. Our service will be able to refine your language skills and guarantee that you
-      use the correct words, tones, and structure for the correct circumstances. Just add the material to the input
-      window and our AI will help you to create the best result.
-    </p>
+  <div class=" dark-bg-color pt-4 pb-4  text-justify  ps-80 pb-3 ps-m-0 " id="anopadding" >
+    <p  class="fs-5 text-center pt-2 text-green" >Convo's artificial intelligence technology can improve <br>
+        your data processing capabilities
+        </p> <br>
+        <p class="text-white  sm-pe-2">The invoices/databases you use are important and our conversational analytics has been developed to make
+            sure you adopt the proper ones. There are two free versions and five Premium versions offered by Convo so you  can rework any text in varied forms. Our service will be able to refine your language skills and guarantee that you use the correct words, tones, and structure for the correct circumstances. Just add the material to the input window and  our AI will help you to create the best result.
+           </p>
   </div>
-  <div class="dark-bg-color pt-4 ps-40 pb-4 sm-460-p-0 " style="border-top: solid #333333 3px; border-bottom: solid #333333 3px;"
-    id="addpadding">
-    <p class="fs-5  text-center text-green">What are the advantages of using Congo's Paraphrasing Tool?</p>
+  <div class="dark-bg-color pt-4 sm-ps-0 ps-80 pb-4 sm-460-p-0 " style="border-top: solid #333333 3px; border-bottom: solid #333333 3px;" id="addpadding" >
+    <div class="pe-3">
+
+    <p class="fs-5  text-center text-green " >What are the advantages of using Congo's Paraphrasing Tool?</p>
     <p class="text-center text-white">This Paraphraser possesses exceptional qualities.</p>
     <div class="row  align-items-center ">
-      <div class=" col-lg-6 col-md-12 col-sm-12 ">
-        <img src="Assets/content.png" alt=""  class="w-sm-100 w-450 w-460-100">
-      </div>
-      <div class=" col-lg-6 col-md-12 col-sm-12 ps-sm-5">
-        <p class="text-white">CUSTOMIZATION <br>
-          Consider the amount of lexical alteration desired.
-          Utilize the Synonym Variable to modify more (or less) of your writing. Sliding the variable to the left will
-          grant you a more exact rewrite with fewer modifications; shifting it to the right will mean you’ll achieve a
-          more imaginative output with more alterations.</p>
-      </div>
+        <div class=" col-lg-6 col-md-12 col-sm-12 d-sm-flex sm-align-items-center sm-justify-content-center">
+            <img src="Assets/content.png" alt=""  class="w-450 w-sm-100">
+        </div>
+        <div class=" col-lg-6 col-md-12 col-sm-12  ">
+            <p class="text-white ">CUSTOMIZATION <br>
+                Consider the amount of lexical alteration desired.
+                Utilize the Synonym Variable to modify more (or less) of your writing. Sliding the variable to the left will grant you a more exact rewrite with fewer modifications; shifting it to the right will mean you’ll achieve a more imaginative output with more alterations.</p>
+        </div>
     </div>
   </div>
 
-  <div class="dark-bg-color sm-ps-0 pt-4 pb-4  ps-70  pt-2" id="paddingadd">
-    <p class="text-green text-center fs-5"> What are the advantages of using Congo's Paraphrasing Tool?</p>
+  </div>
+  
+  <div class="dark-bg-color sm-ps-0 pt-4 pb-4  ps-80 pe-3 pt-2" id="paddingadd">
+    <p class="text-green text-center fs-5" > What are the advantages of using Congo's Paraphrasing Tool?</p>
     <p class="text-white text-center">This Paraphraser possesses exceptional qualities.</p>
-    <div class="row  ps-3 pe-3">
-      <div class=" col-lg-6 col-md-12 col-sm-12 ">
-        <p class="text-white">CUSTOMIZATION <br>
-          Consider the amount of lexical alteration desired.
-          Utilize the Synonym Variable to modify more (or less) of your
-          writing. Sliding the variable to the left will grant you a more exact
-          rewrite with fewer modifications; shifting it to the right will mean
-          you’ll achieve a more imaginative output with more alterations.
-        </p>
-      </div>
-      <div class=" col-lg-6 col-md-12 col-sm-12 ps-sm-5">
-        <img src="Assets/content.png" alt="" class="  w-sm-100 w-450  w-460-100">
-      </div>
+    <div class="row  ">
+        <div class=" col-lg-6 col-md-12 col-sm-12 ">
+            <p class="text-white">CUSTOMIZATION <br>
+                Consider the amount of lexical alteration desired.
+                Utilize the Synonym Variable to modify more (or less) of your 
+                writing. Sliding the variable to the left will grant you a more exact
+                 rewrite with fewer modifications; shifting it to the right will mean
+                 you’ll achieve a more imaginative output with more alterations.
+                </p>
+        </div>
+        <div class=" col-lg-6 col-md-12 col-sm-12 ps-sm-1 d-sm-flex sm-align-items-center sm-justify-content-center">
+            <img src="Assets/content.png" alt=""  class="w-450">
+        </div>
     </div>
   </div>
-  </div>
-  <div class="footer  pt-3 pb-3 ps-2 pe-2 ">
-    <div class="ps-50 " id="footerpadding">
-      <div class="row ">
+</div>      
+<div class="footer  pt-3 pb-3 ps-2 pe-2 " >
+    <div  class="ps-50 " id="footerpadding"  > 
+    <div class="row " >
         <div class="col-sm-3 col-md-2 col-lg-2 ">
-          <h6>Products</h6>
-          <span class="fs-14 pb-2 d-inline-block">Marketing</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Sales Solution</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Business</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Data</span> <br>
+            <h6>Products</h6>
+            <span class="fs-14 pb-2 d-inline-block">Marketing</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Sales Solution</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Business</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Data</span> <br>
         </div>
-
+      
         <div class="col-sm-3 col-md-2 col-lg-2">
-          <h6>Support</h6>
-          <span class="fs-14 pb-2 d-inline-block">Documentation</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Help Center</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Business</span> <br>
-        </div>
-        <div class="col-sm-3 col-md-2 col-lg-2">
-          <h6>Company</h6>
-          <span class="fs-14 pb-2 d-inline-block">About</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Team</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Careers</span> <br>
-          <span class="fs-14 pb-2 d-inline-block">News</span> <br>
+            <h6>Support</h6>
+            <span class="fs-14 pb-2 d-inline-block">Documentation</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Help Center</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Business</span> <br>
         </div>
         <div class="col-sm-3 col-md-2 col-lg-2">
-          <h6>Legal</h6>
-          <span class="fs-14 pb-2 d-inline-block">Privacy Policy
-          </span> <br>
-          <span class="fs-14 pb-2 d-inline-block">Terms</span> <br>
-
+            <h6>Company</h6>
+            <span class="fs-14 pb-2 d-inline-block">About</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Team</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Careers</span> <br>
+            <span class="fs-14 pb-2 d-inline-block">News</span> <br>
+        </div>
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <h6>Legal</h6>
+            <span class="fs-14 pb-2 d-inline-block" >Privacy Policy
+            </span> <br>
+            <span class="fs-14 pb-2 d-inline-block">Terms</span> <br>
+            
         </div>
         <div class="col-sm-12 col-md-2 col-lg-2 ">
-          <div class="logo ">
-            <img src="Assets/Ellipse 1 (1).svg" alt="" width="120px">
-            <br>
-            <p class="fs-13 mt-2"> Rapid and maintainable <br> product development</p>
-          </div>
+            <div class="logo ">
+                <img src="Assets/Ellipse 1 (1).svg" alt="" width="120px">
+                <br>
+               <p class="fs-13 mt-2"> Rapid and maintainable <br> product development</p>
+            </div>
         </div>
-      </div> <br>
-      <div class="d-flex pe-4 justify-content-center align-items-center">
-        <span class="d-inline-block me-5 sm-d-none " style="width: 220px; height: 2px; background-color: #FFF;">
+    </div> <br>
+    <div class="d-flex pe-4 justify-content-center align-items-center" >
+        <span class="d-inline-block me-5 sm-d-none " style="width: 220px; height: 2px; background-color: #FFF;" >
         </span>
-        <div class="fs-14 sm-d-none"> © 2023 Argoteks Incorporated. All rights reserved.</div>
-
-        <a href="#"> <i class="fa-brands bg-middle-green fa-facebook-f ps-3" style="font-size: 18px;"></i></a>
-        <a href="#"> <i class="fa-brands bg-middle-green fa-youtube ps-3" style="font-size: 18px;"></i></a>
-        <a href="#"> <i class="fa-brands bg-middle-green fa-instagram ps-3" style="font-size: 18px;"></i></a>
-        <a href="#"> <i class="fa-brands bg-middle-green fa-linkedin-in ps-3" style="font-size: 18px;"></i></a>
-        <span class="d-inline-block ms-5 sm-d-none" style="width: 220px; height: 2px; background-color: #FFF;">
-        </span>
-      </div>
+        <div  class="fs-14 sm-d-none"> © 2023 Argoteks Incorporated. All rights reserved.</div>
+           
+            <a href="#">  <i class="fa-brands bg-middle-green fa-facebook-f ps-3" style="font-size: 18px;"></i></a>
+            <a href="#">     <i class="fa-brands bg-middle-green fa-youtube ps-3" style="font-size: 18px;"></i></a>
+         <a href="#">   <i class="fa-brands bg-middle-green fa-instagram ps-3" style="font-size: 18px;"></i></a>
+            <a href="#"> <i class="fa-brands bg-middle-green fa-linkedin-in ps-3" style="font-size: 18px;"></i></a>
+            <span class="d-inline-block ms-5 sm-d-none" style="width: 220px; height: 2px; background-color: #FFF;" >
+            </span>
+        </div>
     </div>
-  </div>
+</div>
   <style>
     td,
     th {
@@ -457,15 +520,15 @@
     function removeClass() {
 
       var divElement = document.getElementById("remove");
-      divElement.classList.toggle('ps-230');
+      divElement.classList.toggle('ps-270');
       var addpadding = document.getElementById('addpadding');
-      addpadding.classList.toggle('ps-160')
+      addpadding.classList.toggle('ps-269')
       var anopadding = document.getElementById('anopadding');
-      anopadding.classList.toggle('ps-230');
+      anopadding.classList.toggle('ps-269');
       var paddingadd = document.getElementById('paddingadd');
-      paddingadd.classList.toggle('ps-200');
+      paddingadd.classList.toggle('ps-269');
       var footerpadding = document.getElementById('footerpadding');
-      footerpadding.classList.toggle('ps-230')
+      footerpadding.classList.toggle('ps-269')
     }
   
 

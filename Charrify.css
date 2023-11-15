@@ -106,13 +106,31 @@ canvas#bar-chart {
    }
    .me-4 {
     margin-right: 0.9rem!important;
+    margin-left: 0.9rem!important;
+}
+.sm-ps-460-0{
+    padding-left: 0 !important;
 }
 
  .w-600{
     width: 100% !important;
  }
-}
 
+
+}
+.ps-86{
+    padding-left: 90px;
+    transition: .5s ease-in-out;
+}
+@media screen and (max-width: 991px){
+    .ps-86{
+        padding-left: 76px  ;
+        transition: .5s ease-in-out;
+    }
+    .ps-270{
+        padding-left: 230px !important;
+    }
+}
 @media screen and (max-width: 768px){
     canvas#bar-chart{
         width: 100% !important;
@@ -126,5 +144,20 @@ canvas#bar-chart {
      .ps-10px{
         padding-left: 8px;
      }
-     
+     .ps-86{
+        padding-left: 1px !important  ;
+        transition: .5s ease-in-out;
+    }
+    .ps-270{
+        padding-left: 70px !important;
+    }
+    .ps-269{
+        padding-left: 80px !important;
+    }
+}
+.ps-270{
+    padding-left: 240px;
+}
+.ps-269{
+    padding-left: 225px;
 }
