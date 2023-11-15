@@ -52,7 +52,6 @@ canvas#bar-chart {
     width: 530px ;
 }
 @media screen and (max-width: 460px){
-   
  
     .maindiv {
         width: 100% !important;
@@ -108,9 +107,10 @@ canvas#bar-chart {
     margin-right: 0.9rem!important;
     margin-left: 0.9rem!important;
 }
-.sm-ps-460-0{
-    padding-left: 0 !important;
-}
+ .sm-ps-460-0{
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+} 
 
  .w-600{
     width: 100% !important;
@@ -154,6 +154,7 @@ canvas#bar-chart {
     .ps-269{
         padding-left: 80px !important;
     }
+   
 }
 .ps-270{
     padding-left: 240px;

@@ -62,7 +62,7 @@
                 <!-- <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a> -->
             </nav>
         </div>
-        <div class="d-flex justify-content-center pt-70 ps-70" >
+        <div class="d-flex justify-content-center pt-70 ms-3 me-3" id="classdelete">
                 <div class="card pt-4 pb-4 ps-2 pe-2  mt-4 mb-4" style=" width: 550px;" >
                     <h5 class="text-center text-white">Invite Users</h5>
                     <p class="text-white text-center">Invite users by email and assign them role below</p>
@@ -187,7 +187,9 @@
    });
 function removeClass() {
     var footerpadding = document.getElementById('footerpadding');
-    footerpadding.classList.toggle('ps-230')
+    footerpadding.classList.toggle('ps-230');
+    var classdelete = document.getElementById('classdelete')
+    classdelete.classList.toggle('ms-3');
 }
 
     </script>

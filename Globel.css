@@ -365,10 +365,21 @@ textarea {
         width: 400px !important;
        }
     .min-w-460{
-        min-width:380px !important;
+        width: 370px !important;
+    }
+    .ps-30{
+        padding-left: 70px;
+        transition: .5s;
     }
  
 }
 .w-240{
     width: 240px;
+}
+.min-w-460{
+    width: 440px;
+}
+.ms-10{
+    margin-left:10px !important;
+    transition: .5s !important;
 }
