@@ -395,15 +395,17 @@ textarea {
   .sm-460-w-70px{
     width: 170px;
     text-overflow: ellipsis !important;
-    overflow: hidden;
     white-space: nowrap;
+    overflow: hidden;
     margin-top: 5px;
   }
   .sm-460-w-fixed{
-    overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap !important;
-    white-space: nowrap;
+   position: absolute;
+   right: 0;
+  } 
+  .sm-460-d-flex{
+    display: flex !important;
+    justify-content: start !important;
   }
 }
 .w-240{
