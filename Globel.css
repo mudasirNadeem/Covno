@@ -142,6 +142,7 @@
        .body-pd{
            padding-left: calc(var(--nav-width) + 188px);
        }
+      
        }
        @media screen and (max-width: 991px){
         .md-p-0{
@@ -190,10 +191,23 @@
         position: relative;
         left: 0px !important;
     }
+    .top-12{
+        top: 12px;
+        right: 30px;
+    }
     .w-240{
         width: 120px !important;
     }
+    .top-12{
+        top: 12px;
+        left: 15px !important;
+    }
+   
        }
+       .top-12{
+        top: 12px;
+        right: 10px;
+    }
    body{
          background-color: #858585 !important;
     }
@@ -371,7 +385,17 @@ textarea {
         padding-left: 70px;
         transition: .5s;
     }
- 
+    .translate{
+        position: relative !important;
+        right: 0px !important;
+    }
+  .sm-460-w-70px{
+    width: 150px;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 5px;
+  }
 }
 .w-240{
     width: 240px;
@@ -382,4 +406,7 @@ textarea {
 .ms-10{
     margin-left:10px !important;
     transition: .5s !important;
+}
+.translate{
+    right: 12px;
 }
