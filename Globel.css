@@ -147,6 +147,10 @@
         .md-p-0{
             padding: 0;
         }
+        .md-left-20{
+            position: relative;
+            left: 40px;
+        }
        }
        @media screen and (max-width: 768px){
         .sm-mt-20{
@@ -158,21 +162,29 @@
       
         .ps-230{
             padding-left: 70px !important;
+            transition: .5s all ease-in-out !important;
         }
         
         .ps-160{
-            padding-left: 100px !important;
+            padding-left: 90px !important;
         }
         .ps-200{
             padding-left: 80px !important;
         }
-        .sm-positon-right-20-px{
+        /* .sm-positon-right-20-px{
             position: relative;
             left: 10px;
-        }
+        } */
         canvas#bar-chart{
             width: 100%  !important;
         }
+       .md-left-20{
+        position: relative;
+        left: 0px !important;
+    }
+    .w-240{
+        width: 120px !important;
+    }
        }
    body{
          background-color: #858585 !important;
@@ -235,6 +247,10 @@
      .ps-70{
         padding-left: 100px;
     } 
+    .ps-73{
+        padding-left: 90px;
+        transition: .5s ease-in-out;
+    }
     .pt-70{
         padding-top: 70px;
     
@@ -328,6 +344,7 @@ textarea {
 .w-450{
     width: 400px;
 }
+
 @media screen and (max-width: 460px){
     .w-450{
         width: 100% !important;
@@ -342,5 +359,8 @@ textarea {
     .min-w-460{
         min-width:380px !important;
     }
-      
+ 
+}
+.w-240{
+    width: 240px;
 }
