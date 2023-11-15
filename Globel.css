@@ -121,6 +121,7 @@
    @media screen and (min-width: 769px){
        body{
            margin: calc(var(--header-height) + 1rem) 0 0 0;
+           overflow-x: hidden !important;
        }
        .header{
            height: calc(var(--header-height) + 1rem);
@@ -210,6 +211,7 @@
     }
    body{
          background-color: #858585 !important;
+         overflow-x: hidden !important;
     }
    #body-pd{
         background-color: #858585 !important;
@@ -296,6 +298,7 @@
     }
     body {
         padding-right: 0 !important;
+        overflow-x: hidden !important;
     }
     .bg-black-dark button {
         border: transparent;
