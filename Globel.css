@@ -401,11 +401,14 @@ textarea {
   }
   .sm-460-w-fixed{
    position: absolute;
-   right: 0;
+   right: 8px;
   } 
   .sm-460-d-flex{
     display: flex !important;
     justify-content: start !important;
+  }
+  .sm-460-ms-2{
+    margin-left: 30px;
   }
 }
 .w-240{
